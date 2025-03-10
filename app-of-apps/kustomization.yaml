@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: t77mazens-go 
+  janus-idp.io/tekton: t77mazens-go
+  backstage.io/kubernetes-id: t77mazens-go
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: t77mazens-go
+resources:
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
